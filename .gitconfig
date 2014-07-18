@@ -1,0 +1,12 @@
+[user]
+	name = Mario Rol
+	email = mario.rol@gmail.com
+[core]
+	editor = vim
+	autocrlf = input
+[color]
+	ui = true
+[alias]
+	logg = log --oneline --graph --decorate
+	st = status
+	br = branch
