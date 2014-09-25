@@ -10,3 +10,5 @@
 	logg = log --oneline --graph --decorate
 	st = status
 	br = branch
+[push]
+	default = simple
