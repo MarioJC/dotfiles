@@ -1,5 +1,7 @@
 " An example for a vimrc file.
 "
+" Inmiddels langzaam maar zeker mijn eigen vimrc aan het worden :)
+"
 " Maintainer:	Bram Moolenaar <Bram@vim.org>
 " Last change:	2008 Jul 02
 "
@@ -17,6 +19,42 @@ endif
 " Use Vim settings, rather then Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
 set nocompatible
+
+" ---------------- VUNDLE BEGIN ---------------------------------------------
+
+filetype off	" required by Vundle (will be switched on later)
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+
+" Keep Plugin commands between vundle#begin() and vundle/end().
+
+Plugin 'thanthese/Tortoise-Typing'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just
+" :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to
+" auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
+
+" ---------------- VUNDLE END -----------------------------------------------
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
@@ -61,6 +99,7 @@ if has("autocmd")
   " 'cindent' is on in C files, etc.
   " Also load indent files, to automatically do language-dependent indenting.
   filetype plugin indent on
+  set omnifunc=syntaxcomplete#Complete
 
   " Put these in an autocmd group, so that we can delete them easily.
   augroup vimrcEx

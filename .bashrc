@@ -72,7 +72,7 @@ BCYN="\[\033[46m\]" # background cyan
 BWHT="\[\033[47m\]" # background white
 
 # colored prompt with git branch information when inside git repo
-function color_my_prompt {
+function colored_git_prompt {
   local __user_and_host="\[\033[01;32m\]\u@\h"
   local __cur_location="\[\033[01;34m\]\W"
   local __git_branch_color="\[\033[31m\]"
@@ -86,7 +86,7 @@ function color_my_prompt {
 if [ "$color_prompt" = yes ]; then
     #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
     #PS1="$HC$FYEL[$FBLE${debian_chroot:+($debian_chroot)}\u@\h$FYEL: $FBLE\W$FYEL]\\$ $RS"
-    color_my_prompt # nice git prompt!
+    colored_git_prompt # nice git prompt!
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\W\$ '
 fi
@@ -118,7 +118,9 @@ if [ -x /usr/bin/dircolors ]; then
     #alias dir='dir --color=auto'
     #alias vdir='vdir --color=auto'
 
-    alias grep='grep --color=auto --recursive' 
+    #alias grep='grep --color=auto --recursive' 
+    # het grep-filter in de git-prompt struikelde over de recursive-optie na de upgrade 12.04 --> 14.04
+    alias grep='grep --color=auto' 
 
     # egrep and fgrep are deprecated (support for backward
     # compatibility only)
