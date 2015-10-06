@@ -143,4 +143,4 @@ if [ -f ~/.git-completion.bash ]; then
 	source ~/.git-completion.bash
 fi
 
-/usr/games/fortune
+$(which fortune) 2>/dev/null
