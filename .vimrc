@@ -32,10 +32,11 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
-
+"Plugin 'thanthese/Tortoise-Typing'
+"Plugin 'othree/html5.vim'
+"Plugin 'Valloric/YouCompleteMe'
+"
 " Keep Plugin commands between vundle#begin() and vundle/end().
-
-Plugin 'thanthese/Tortoise-Typing'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
