@@ -62,6 +62,14 @@ FBLE="\[\033[34m\]" # foreground blue
 FMAG="\[\033[35m\]" # foreground magenta
 FCYN="\[\033[36m\]" # foreground cyan
 FWHT="\[\033[37m\]" # foreground white
+FBLK_BOLD="\[\033[01;30m\]" # foreground black bold
+FRED_BOLD="\[\033[01;31m\]" # foreground red bold
+FGRN_BOLD="\[\033[01;32m\]" # foreground green bold
+FYEL_BOLD="\[\033[01;33m\]" # foreground yellow bold
+FBLE_BOLD="\[\033[01;34m\]" # foreground blue bold
+FMAG_BOLD="\[\033[01;35m\]" # foreground magenta bold
+FCYN_BOLD="\[\033[01;36m\]" # foreground cyan bold
+FWHT_BOLD="\[\033[01;37m\]" # foreground white bold
 BBLK="\[\033[40m\]" # background black
 BRED="\[\033[41m\]" # background red
 BGRN="\[\033[42m\]" # background green
@@ -73,12 +81,12 @@ BWHT="\[\033[47m\]" # background white
 
 # colored prompt with git branch information when inside git repo
 function colored_git_prompt {
-  local __user_and_host="\[\033[01;32m\]\u@\h"
-  local __cur_location="\[\033[01;34m\]\W"
-  local __git_branch_color="\[\033[31m\]"
+  local __user_and_host="$FGRN_BOLD\u@\h$RS"
+  local __cur_location="$FBLE_BOLD\W$RS"
+  local __git_branch_color="$FRED_BOLD"
   local __git_branch='`git branch 2> /dev/null | grep -e ^* | sed -e  s/^\\\\\*\ \(.+\)$/\(\\\\\1\)\ /`'
-  local __prompt_tail="\[\033[35m\]$"
-  local __last_color="\[\033[00m\]"
+  local __prompt_tail="$FMAG\$$RS"
+  local __last_color="$RS"
 
   PS1="$__user_and_host $__cur_location $__git_branch_color$__git_branch$__prompt_tail$__last_color "
 }

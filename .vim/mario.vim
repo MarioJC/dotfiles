@@ -1,12 +1,16 @@
+"avoid default matching parentheses
+let loaded_matchparen = 1
+
 set number		" line numbers
+set hlsearch
 
 " disable arrow keys (gratis ontwenningskuurtje)
 " 
 " disable arrow keys in normal mode
-noremap <up> <NOP>
-noremap <down> <NOP>
-noremap <left> <NOP>
-noremap <right> <NOP>
+nnoremap <up> <C-y>
+nnoremap <down> <C-e>
+nnoremap <left> <NOP>
+nnoremap <right> <NOP>
 "
 " disable arrow keys in insert mode
 inoremap <up> <NOP>
@@ -23,10 +27,10 @@ vnoremap <right> <NOP>
 " einde ontwenningskuur :)
 
 " make moving between windows easier
-map <c-j> <c-w>j
-map <c-k> <c-w>k
-map <c-l> <c-w>l
-map <c-h> <c-w>h
+noremap <c-j> <c-w>j
+noremap <c-k> <c-w>k
+noremap <c-l> <c-w>l
+noremap <c-h> <c-w>h
 
 " Allow saving of files as sudo when I forgot to start vim using sudo.
 cmap w!! w !sudo tee > /dev/null %

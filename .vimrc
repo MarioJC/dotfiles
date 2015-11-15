@@ -35,7 +35,7 @@ Plugin 'gmarik/Vundle.vim'
 
 " Keep Plugin commands between vundle#begin() and vundle/end().
 
-Plugin 'thanthese/Tortoise-Typing'
+"Plugin 'thanthese/Tortoise-Typing'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -135,3 +135,4 @@ if !exists(":DiffOrig")
 endif
 
 source ~/.vim/mario.vim
+source ~/.vim/hardway.vim
