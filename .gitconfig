@@ -4,6 +4,7 @@
 [core]
 	editor = vim
 	autocrlf = input
+	excludesfile = /home/mario/.gitignore_global
 [color]
 	ui = true
 [alias]

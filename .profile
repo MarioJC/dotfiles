@@ -21,4 +21,4 @@ if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
 
-PATH="$PATH:$HOME/wordpress-3.7-0/php/bin:$HOME/scripts"
+PATH="$PATH:$HOME/wordpress-4.0-0/php/bin:$HOME/dev/scripts"

@@ -136,3 +136,4 @@ if !exists(":DiffOrig")
 endif
 
 source ~/.vim/mario.vim
+source ~/.vim/hardway.vim
