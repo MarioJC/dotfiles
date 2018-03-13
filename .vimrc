@@ -35,6 +35,7 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
+Plugin 'tpope/vim-surround'
 "Plugin 'thanthese/Tortoise-Typing'
 "Plugin 'othree/html5.vim'
 "Plugin 'Valloric/YouCompleteMe'
