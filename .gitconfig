@@ -8,8 +8,10 @@
 [color]
 	ui = true
 [alias]
-	logg = log --oneline --graph --decorate
 	st = status
-	br = branch
+	br = branch -a -v
+	lg = log --stat
+	logg = log --oneline --graph --decorate
+	last = log -1 HEAD --stat
 [push]
 	default = simple
