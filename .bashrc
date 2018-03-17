@@ -84,7 +84,7 @@ function colored_git_prompt {
   local __user_and_host="$FGRN_BOLD\u@\h$RS"
   local __cur_location="$FBLE_BOLD\W$RS"
   local __git_branch_color="$FRED_BOLD"
-  local __git_branch='`git branch 2> /dev/null | grep -e ^* | sed -e  s/^\\\\\*\ \(.+\)$/\(\\\\\1\)\ /`'
+  local __git_branch='`git branch 2> /dev/null | grep -e ^* | sed -e  "s/^\*\ \(.\+\)$/\(\1\)\ /"`'
   local __prompt_tail="$FMAG\$$RS"
   local __last_color="$RS"
 
