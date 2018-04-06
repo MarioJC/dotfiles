@@ -10,8 +10,8 @@
 [alias]
 	st = status
 	br = branch -a -v
-	lg = log --stat
-	logg = log --oneline --graph --decorate
+	logg = log --stat
+	lg = log --oneline --graph --decorate
 	last = log -1 HEAD --stat
 [push]
 	default = simple
