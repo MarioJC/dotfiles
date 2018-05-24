@@ -122,7 +122,7 @@ fi
 if [ -x /usr/bin/dircolors ]; then
     eval "`dircolors -b`"
     #colored listing and hide (vim) backup files
-    alias ls='ls -N --color=auto --hide=*~'
+    alias ls='ls -F --literal --color=auto --hide=*~'
     #alias dir='dir --color=auto'
     #alias vdir='vdir --color=auto'
 
