@@ -13,5 +13,6 @@
 	logg = log --stat
 	lg = log --oneline --graph --decorate
 	last = log -1 HEAD --stat
+	logo = log --pretty=format:'%C(yellow)%h %C(red)%ad %C(blue)%an%C(green)%d %C(reset)%s' --date=short
 [push]
 	default = simple
